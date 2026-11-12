@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Redeem Your Medivara Code</title>
+<meta name="description" content="Step-by-step help for redeeming your Medivara promo code on iPhone and Android.">
+<link rel="icon" href="images/icon.png">
+<style>
+  :root {
+    --bg: #f6f3fa; --card: #ffffff; --fg: #1d1626; --muted: #6b6178; --line: #e6dfee;
+    --brand: #613894; --brand-soft: #efe7f8; --ok: #1f7a3a; --ok-soft: #e7f5ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #140d1d; --card: #1f1629; --fg: #f3eefa; --muted: #a99bbb; --line: #33263f;
+      --brand: #b58be8; --brand-soft: #2b1d3c; --ok: #6fd28f; --ok-soft: #173023; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto;
+    padding: 28px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
+  header { display: flex; gap: 14px; align-items: center; margin-bottom: 22px; }
+  header img { width: 56px; height: 56px; border-radius: 14px; }
+  h1 { font-size: 24px; line-height: 1.2; margin: 0; text-wrap: balance; }
+  header p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 14px; padding: 5px; margin-bottom: 18px; }
+  .tabs button { border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 650;
+    padding: 10px; border-radius: 10px; cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--brand); color: #fff; }
+  ol.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+  ol.steps li { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+    counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 12px; }
+  ol.steps li::before { content: counter(s); width: 34px; height: 34px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand); font-weight: 750; display: grid; place-items: center; }
+  .step-body { min-width: 0; }
+  .step-body p { margin: 4px 0 0; }
+  .shot { margin-top: 12px; max-width: 280px; width: 100%; border-radius: 14px; border: 1px solid var(--line); display: block; }
+  .shot[data-missing] { display: none; }
+  .note { background: var(--brand-soft); border-radius: 14px; padding: 14px 16px; margin: 18px 0 0; font-size: 15px; }
+  .ok { background: var(--ok-soft); color: var(--ok); }
+  section.help { margin-top: 30px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+  section.help h2 { font-size: 18px; margin: 0 0 8px; }
+  .email { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+  .email code { background: var(--brand-soft); color: var(--brand); padding: 8px 12px; border-radius: 10px;
+    font: 600 15px ui-monospace, SFMono-Regular, Menlo, monospace; user-select: all; }
+  .email button { border: 1px solid var(--line); background: var(--card); color: var(--fg); font: inherit;
+    font-size: 14px; padding: 7px 12px; border-radius: 10px; cursor: pointer; }
+  footer { margin-top: 26px; color: var(--muted); font-size: 13px; text-align: center; }
+  b { font-weight: 650; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="images/icon.png" alt="">
+    <div>
+      <h1>Redeem your free Medivara Premium</h1>
+      <p>Medivara – Pharmacology Q&amp;A · use the code printed on your card</p>
+    </div>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-ios" aria-selected="true" aria-controls="ios">iPhone / iPad</button>
+    <button role="tab" id="tab-android" aria-selected="false" aria-controls="android">Android</button>
+  </div>
+
+  <div id="ios" role="tabpanel" aria-labelledby="tab-ios">
+    <ol class="steps">
+      <li><div class="step-body"><b>Download Medivara</b>
+        <p>Search “Medivara – Pharmacology Q&amp;A” in the App Store and install it.</p>
+        <img class="shot" src="images/ios-1.png" alt="Medivara in the App Store"></div></li>
+      <li><div class="step-body"><b>Open Settings in the app</b>
+        <p>Tap the <b>Settings</b> tab at the bottom, then tap <b>Redeem Offer Code</b>.</p>
+        <img class="shot" src="images/ios-2.png" alt="Settings tab with Redeem Offer Code"></div></li>
+      <li><div class="step-body"><b>Enter your code</b>
+        <p>Type the code from your card and tap <b>Redeem</b>. Codes use a zero (0), not the letter O.</p>
+        <img class="shot" src="images/ios-3.png" alt="Apple code entry screen"></div></li>
+      <li><div class="step-body"><b>Confirm</b>
+        <p>Confirm with Face ID or your password. Premium unlocks right away.</p>
+        <img class="shot" src="images/ios-4.png" alt="Confirmation screen"></div></li>
+    </ol>
+  </div>
+
+  <div id="android" role="tabpanel" aria-labelledby="tab-android" hidden>
+    <ol class="steps">
+      <li><div class="step-body"><b>Open the plans</b>
+        <p>In Medivara, go to <b>Settings → Redeem Offer Code → Go to Plans</b>, or tap <b>Upgrade</b>.</p>
+        <img class="shot" src="images/android-1.png" alt="Medivara plans screen"></div></li>
+      <li><div class="step-body"><b>Choose the 3-month plan</b>
+        <p>Select the <b>3-month plan</b> and tap <b>Subscribe</b>. The code only works on this plan.</p>
+        <img class="shot" src="images/android-2.png" alt="3-month plan selected"></div></li>
+      <li><div class="step-body"><b>Open the payment dropdown</b>
+        <p>In the Google Play window, tap the <b>dropdown where your card is shown</b>.</p>
+        <img class="shot" src="images/android-3.png" alt="Google Play payment window"></div></li>
+      <li><div class="step-body"><b>Redeem your code</b>
+        <p>Select <b>Redeem code</b>, enter the code from your card and confirm.</p>
+        <img class="shot" src="images/android-4.png" alt="Redeem code option"></div></li>
+      <li><div class="step-body"><b>Start your free period</b>
+        <p>Tap <b>Subscribe</b>. Google Play shows the free period before you confirm.</p>
+        <img class="shot" src="images/android-5.png" alt="Subscribe with free trial"></div></li>
+    </ol>
+    <p class="note">Already had a Medivara subscription or free trial on this Google account? Google won't accept the code. Contact us below and we'll set up your access.</p>
+  </div>
+
+  <p class="note ok">After the free period, your subscription may renew unless you cancel it in App Store or Google Play subscription settings.</p>
+
+  <section class="help">
+    <h2>Code not working?</h2>
+    <p>We'll set up your access. In the app, go to <b>Settings → Feedback &amp; Support</b>, or email us with your order number:</p>
+    <div class="email"><code id="mail">medivaracards@gmail.com</code><button type="button" id="copy">Copy</button></div>
+  </section>
+
+  <footer>Medivara · Pharmacology for Nursing &amp; NCLEX</footer>
+</div>
+<script>
+  const tabs = { ios: document.getElementById('tab-ios'), android: document.getElementById('tab-android') };
+  function show(id) {
+    for (const [k, b] of Object.entries(tabs)) {
+      b.setAttribute('aria-selected', String(k === id));
+      document.getElementById(k).hidden = k !== id;
+    }
+  }
+  tabs.ios.onclick = () => show('ios');
+  tabs.android.onclick = () => show('android');
+  if (location.hash === '#android' || (!location.hash && /Android/i.test(navigator.userAgent))) show('android');
+  document.querySelectorAll('.shot').forEach(img => img.addEventListener('error', () => img.setAttribute('data-missing', '')));
+  document.getElementById('copy').onclick = async (e) => {
+    try { await navigator.clipboard.writeText(document.getElementById('mail').textContent); e.target.textContent = 'Copied'; }
+    catch { getSelection().selectAllChildren(document.getElementById('mail')); }
+  };
+</script>
+</body>
+</html>
