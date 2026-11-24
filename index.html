@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Redeem Your Medivara Code</title>
 <meta name="description" content="Step-by-step help for redeeming your Medivara promo code on iPhone and Android.">
+<meta name="robots" content="noindex">
 <link rel="icon" href="images/icon.png">
 <style>
   :root {
     --bg: #f6f3fa; --card: #ffffff; --fg: #1d1626; --muted: #6b6178; --line: #e6dfee;
     --brand: #613894; --brand-soft: #efe7f8; --ok: #1f7a3a; --ok-soft: #e7f5ec;
+    --code: #d81b5a; --warn: #c62828; --warn-soft: #fdecea;
   }
   @media (prefers-color-scheme: dark) {
     :root { --bg: #140d1d; --card: #1f1629; --fg: #f3eefa; --muted: #a99bbb; --line: #33263f;
-      --brand: #b58be8; --brand-soft: #2b1d3c; --ok: #6fd28f; --ok-soft: #173023; color-scheme: dark; }
+      --brand: #b58be8; --brand-soft: #2b1d3c; --ok: #6fd28f; --ok-soft: #173023; --code: #ff6b9a; --warn: #ff8a80; --warn-soft: #3a1717; color-scheme: dark; }
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--fg);
@@ -47,6 +49,19 @@
     font: 600 15px ui-monospace, SFMono-Regular, Menlo, monospace; user-select: all; }
   .email button { border: 1px solid var(--line); background: var(--card); color: var(--fg); font: inherit;
     font-size: 14px; padding: 7px 12px; border-radius: 10px; cursor: pointer; }
+  .codebox { background: var(--card); border: 2px solid var(--brand); border-radius: 20px; padding: 22px 18px; text-align: center; }
+  .pill { display: inline-block; background: var(--brand); color: #fff; font-weight: 750; font-size: 13px; letter-spacing: .06em;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 99px; }
+  .codebox .lbl { margin-top: 10px; color: var(--muted); font-size: 14px; }
+  .bigcode { font-size: 44px; font-weight: 850; letter-spacing: .06em; color: var(--code); margin: 2px 0 12px; overflow-wrap: anywhere; }
+  .copycode { width: 100%; border: 0; background: var(--brand); color: #fff; font: inherit; font-weight: 700; font-size: 17px;
+    padding: 13px; border-radius: 12px; cursor: pointer; }
+  .codebox .hint { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+  h2.howto { font-size: 20px; margin: 28px 0 12px; }
+  section.help { background: var(--warn-soft); border: 2px solid var(--warn); }
+  section.help h2 { color: var(--warn); }
+  .tpl { margin-top: 10px; background: var(--card); border-radius: 10px; padding: 10px 12px; font-size: 14px; line-height: 1.7; }
+  .tpl b { color: var(--brand); }
   footer { margin-top: 26px; color: var(--muted); font-size: 13px; text-align: center; }
   b { font-weight: 650; }
 </style>
@@ -57,7 +72,7 @@
     <img src="images/icon.png" alt="">
     <div>
       <h1>Redeem your free Medivara Premium</h1>
-      <p>Medivara – Pharmacology Q&amp;A · use the code printed on your card</p>
+      <p>Medivara – Pharmacology Q&amp;A · your code and step-by-step guide</p>
     </div>
   </header>
 
@@ -65,6 +80,19 @@
     <button role="tab" id="tab-ios" aria-selected="true" aria-controls="ios">iPhone / iPad</button>
     <button role="tab" id="tab-android" aria-selected="false" aria-controls="android">Android</button>
   </div>
+
+  <div class="codebox">
+    <span class="pill" id="offer">3 months free</span>
+    <div id="has-code">
+      <div class="lbl">Your offer code</div>
+      <div class="bigcode" id="code">MED32026</div>
+      <button type="button" class="copycode" id="copycode">Copy code</button>
+      <p class="hint" id="hint">Then follow the steps below.</p>
+    </div>
+    <p class="hint" id="no-code" hidden><b>Email us for your code</b> (see below). We'll reply with your code or set up your access.</p>
+  </div>
+
+  <h2 class="howto">Show me how to redeem</h2>
 
   <div id="ios" role="tabpanel" aria-labelledby="tab-ios">
     <ol class="steps">
@@ -75,7 +103,7 @@
         <p>Tap the <b>Settings</b> tab at the bottom, then tap <b>Redeem Offer Code</b>.</p>
         <img class="shot" src="images/ios-2.jpg" alt="Settings tab with Redeem Offer Code" loading="lazy"></div></li>
       <li><div class="step-body"><b>Enter your code</b>
-        <p>Type the code printed on your card, or <a href="#help">request one by email</a>, and tap <b>Continue</b>.</p>
+        <p>Paste or type the code above and tap <b>Continue</b>.</p>
         <img class="shot" src="images/ios-3.jpg" alt="Redeem Offer code entry screen" loading="lazy"></div></li>
       <li><div class="step-body"><b>Tap Redeem Offer</b>
         <p>You'll see <b>3 months free</b> on the Medivara Premium 3 Month Plan. Tap <b>Redeem Offer</b>.</p>
@@ -104,7 +132,7 @@
         <p>In the Google Play window, tap the <b>dropdown where your card is shown</b>.</p>
         <img class="shot" src="images/android-3.jpg" loading="lazy" alt="Google Play payment window"></div></li>
       <li><div class="step-body"><b>Redeem your code</b>
-        <p>Select <b>Redeem code</b>, enter the code printed on your card, or <a href="#help">request one by email</a>, and confirm.</p>
+        <p>Select <b>Redeem code</b>, paste or type the code above, and confirm.</p>
         <img class="shot" src="images/android-4.jpg" loading="lazy" alt="Redeem code option"></div></li>
       <li><div class="step-body"><b>Start your free period</b>
         <p>Tap <b>Subscribe</b>. Google Play shows the free period before you confirm.</p>
@@ -116,24 +144,43 @@
   <p class="note ok">After the free period, your subscription may renew unless you cancel it in App Store or Google Play subscription settings.</p>
 
   <section class="help" id="help">
-    <h2>Code not working?</h2>
+    <h2>⚠️ Code not working?</h2>
     <p>We'll set up your access. In the app, go to <b>Settings → Feedback &amp; Support</b>, or email us with your order number:</p>
     <div class="email"><code id="mail">medivaracards@gmail.com</code><button type="button" id="copy">Copy</button></div>
+    <div class="tpl"><b>Subject:</b> Access Request<br><b>Order number:</b> your Amazon or TikTok Shop order<br><b>Phone:</b> iPhone or Android</div>
   </section>
 
   <footer>Medivara · Pharmacology for Nursing &amp; NCLEX</footer>
 </div>
 <script>
+  // Codes come from codes.json. Edit that file on GitHub to change them.
+  let CODES = { ios: { code: "MED32026", offer: "3 months free" }, android: { code: "MED32026", offer: "3 months free" } };
+  let current = 'ios';
+  function renderCode() {
+    const c = CODES[current] || {};
+    document.getElementById('offer').textContent = c.offer || 'Free Premium';
+    document.getElementById('code').textContent = c.code || '';
+    document.getElementById('has-code').hidden = !c.code;
+    document.getElementById('no-code').hidden = !!c.code;
+    document.getElementById('copycode').textContent = 'Copy code';
+  }
   const tabs = { ios: document.getElementById('tab-ios'), android: document.getElementById('tab-android') };
   function show(id) {
     for (const [k, b] of Object.entries(tabs)) {
       b.setAttribute('aria-selected', String(k === id));
       document.getElementById(k).hidden = k !== id;
     }
+    current = id; renderCode();
   }
   tabs.ios.onclick = () => show('ios');
   tabs.android.onclick = () => show('android');
   if (location.hash === "#android" || (location.hash !== "#ios" && /Android/i.test(navigator.userAgent))) show("android");
+  renderCode();
+  fetch('codes.json', { cache: 'no-store' }).then(r => r.json()).then(j => { CODES = j; renderCode(); }).catch(() => {});
+  document.getElementById('copycode').onclick = async (e) => {
+    try { await navigator.clipboard.writeText(document.getElementById('code').textContent); e.target.textContent = 'Copied ✓'; }
+    catch { getSelection().selectAllChildren(document.getElementById('code')); }
+  };
   document.querySelectorAll('.shot').forEach(img => img.addEventListener('error', () => img.setAttribute('data-missing', '')));
   document.getElementById('copy').onclick = async (e) => {
     try { await navigator.clipboard.writeText(document.getElementById('mail').textContent); e.target.textContent = 'Copied'; }
